@@ -3,6 +3,6 @@ container:
   cpu: 4
   memory: 12G
 
-steps:
-  - name: Install required system packages
-    run: sudo apt update; sudo apt -y install python3-venv
+task:
+    name: Install required system packages
+    script: sudo apt update; sudo apt -y install python3-venv
