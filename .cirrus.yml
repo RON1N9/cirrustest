@@ -4,4 +4,4 @@ container:
   memory: 12G
 
 task:
-  script: sudo apt-get update
+  script: git clone https://github.com/akhilnarang/scripts
