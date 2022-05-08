@@ -1,9 +1,10 @@
 task:
-  name: "Ubuntu SSH"
+  name: "Build ROM"
+  timeout_in: 6h 
   container:
       image: ubuntu:latest
-      cpu: 8
-      memory: 32G
+      cpu: 16
+      memory: 120G
   
   Build-Env-Setup_script:
        - export DEBIAN_FRONTEND=noninteractive
