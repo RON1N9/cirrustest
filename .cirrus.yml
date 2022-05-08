@@ -6,3 +6,5 @@ container:
 task:
     name: Df -h
     script: df -h
+    name: Install Git
+    script: apt-get install git -y
