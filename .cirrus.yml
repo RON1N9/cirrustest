@@ -3,6 +3,6 @@ container:
   cpu: 4
   memory: 12G
 
-task:
-  run: sudo apt-get update
-  run: sudo apt-get install git -y
+steps:
+  - name: Install required system packages
+        run: sudo apt update; sudo apt -y install python3-venv
