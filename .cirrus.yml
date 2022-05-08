@@ -4,7 +4,7 @@ task:
   container:
       image: ubuntu:latest
       cpu: 8
-      memory: 120G
+      memory: 32
   
   Build-Env-Setup_script:
        - export DEBIAN_FRONTEND=noninteractive
