@@ -3,5 +3,6 @@ container:
   cpu: 4
   memory: 12G
 
-task:
-  script: git clone https://github.com/akhilnarang/scripts
+steps:
+  run: sudo apt-get update
+  run: sudo apt-get install git -y
