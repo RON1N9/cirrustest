@@ -4,5 +4,5 @@ container:
   memory: 12G
 
 task:
-    name: Install required system packages
-    script: sudo apt update; sudo apt -y install python3-venv
+    name: Df -h
+    script: df -h
