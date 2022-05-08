@@ -1,5 +1,5 @@
 container:
-  image: apon77/aosp:cirrus
+  image: node:latest
   cpu: 8
   memory: 32G
 
