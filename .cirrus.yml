@@ -11,4 +11,22 @@ task:
 task:
     name: Clone Scripts
     scripts: git clone https://github.com/akhilnarang/scripts
-
+task:
+    name: Enter Scripts
+    scripts: cd scripts
+task:
+    name: Build environment
+    scripts: pwd
+    scripts: bash setup/android_build_env.sh
+task:
+    name: Set Git User
+    scripts: git config --global user.email linuxxxkali33@gmail.com
+    scripts: git config --global user.name RON1N9
+task:
+    name: Make ROM Directory
+    scripts: mkdir lineage
+task:
+    name: Sync ROM
+    scripts: cd lineage
+    scripts: repo init -u https://github.com/LineageOS/android.git -b lineage-18.1
+    scripts: repo sync
