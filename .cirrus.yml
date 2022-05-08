@@ -5,4 +5,4 @@ container:
 
 steps:
   - name: Install required system packages
-        run: sudo apt update; sudo apt -y install python3-venv
+    run: sudo apt update; sudo apt -y install python3-venv
