@@ -3,6 +3,6 @@ container:
   cpu: 4
   memory: 12G
 
-steps:
+task:
   run: sudo apt-get update
   run: sudo apt-get install git -y
