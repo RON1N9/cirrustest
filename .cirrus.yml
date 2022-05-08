@@ -1,26 +1,9 @@
 container:
-  image: node:latest
+  image: apon77/aosp:cirrus
   cpu: 8
   memory: 32G
 
 task:
-    name: Df -h
-    script: df -h
-    name: Install Git
-    script: apt-get install git -y
-    name: Clone Scripts
-    scripts: git clone https://github.com/akhilnarang/scripts
-    name: Enter Scripts
-    scripts: cd scripts
-    name: Build environment
-    scripts: pwd
-    scripts: bash setup/android_build_env.sh
-    name: Set Git User
-    scripts: git config --global user.email linuxxxkali33@gmail.com
-    scripts: git config --global user.name RON1N9
-    name: Make ROM Directory
-    scripts: mkdir lineage
     name: Sync ROM
-    scripts: cd lineage
     scripts: repo init -u https://github.com/LineageOS/android.git -b lineage-18.1
     scripts: repo sync
