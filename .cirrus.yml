@@ -1,10 +1,5 @@
 container:
-  image: openjdk:latest
-  cpu: 4
-  memory: 12G
-
-task:
-    name: Df -h
-    script: df -h
-    name: Install Git
-    script: apt-get install git -y
+    image: node:latest
+setup_script:
+    - apt-get update
+    - apt-get install build-essential
