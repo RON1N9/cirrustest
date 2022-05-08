@@ -3,7 +3,7 @@ task:
   timeout_in: 6h 
   container:
       image: ubuntu:latest
-      cpu: 16
+      cpu: 12
       memory: 120G
   
   Build-Env-Setup_script:
