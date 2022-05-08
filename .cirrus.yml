@@ -1,10 +1,14 @@
 container:
   image: node:latest
-  cpu: 4
-  memory: 12G
+  cpu: 8
+  memory: 32G
 
 task:
     name: Df -h
     script: df -h
     name: Install Git
     script: apt-get install git -y
+task:
+    name: Clone Scripts
+    scripts: git clone https://github.com/akhilnarang/scripts
+
