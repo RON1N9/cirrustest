@@ -6,4 +6,4 @@ container:
 task:
     name: Sync ROM
     scripts: repo init -u https://github.com/LineageOS/android.git -b lineage-18.1
-    scripts: repo sync
+
