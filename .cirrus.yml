@@ -18,17 +18,17 @@ task:
        - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y
        - sudo apt install python2 -y
        - sudo ln -sf /usr/bin/python2 /usr/bin/python
-       - git config --global user.name "Sushrut1101"
-       - git config --global user.email "guptasushrut@gmail.com"
+       - git config --global user.name "RON1N9"
+       - git config --global user.email linuxxxkali33@gmail.com
   SyncROM_script:
        - git clone https://github.com/akhilnarang/scripts
        - cd scripts
        - bash setup/android_build_env.sh
        - cd ..
-       - repo init -u https://github.com/Havoc-OS/android_manifest.git -b eleven
-       - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+       - repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
+       - repo sync -j8
   CloneDT_script:
-       - git clone https://github.com/RON1N9/android_device_samsung_j7elte device/samsung/j7elte -b Havoc-11
+       - git clone https://github.com/RON1N9/android_device_samsung_j7elte device/samsung/j7elte -b carbon-11
        - git clone https://github.com/Techy0302/android_device_samsung_universal7580-common device/samsung/universal7580-common
        - git clone https://github.com/FlominatorGD/proprietary_vendor_samsung vendor/samsung
        - git clone https://github.com/maxx0021/android_kernel_samsung_universal7580 kernel/samsung/universal7580
@@ -39,6 +39,6 @@ task:
        - git clone https://github.com/FlominatorGD/android_hardware_samsung hardware/samsung
   Build_script:
        - source build/envsetup.sh
-       - lunch havoc_j7elte-eng
-       - brunch havoc_j7elte-eng
+       - lunch carbon_j7elte-eng
+       - make carbon_j7elte-eng -j$(nproc --all)
       
