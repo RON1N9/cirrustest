@@ -42,6 +42,6 @@ task:
        - git clone https://github.com/LineageOS/android_system_tools_dtbtool system/tools/dtbtool
   Build_script:
        - source build/envsetup.sh
-       - lunch carbon_j7elte-eng
-       - make carbon_j7elte-eng -j$(nproc --all)
+       - lunch carbon_j7elte-userdebug
+       - make carbon_j7elte-userdebug -j$(nproc --all)
       
