@@ -37,6 +37,9 @@ task:
        - git clone https://github.com/maxx0021/android_hardware_samsung_slsi_openmax hardware/samsung_slsi/openmax
        - git clone https://github.com/maxx0021/android_hardware_samsung_slsi_exynos5 hardware/samsung_slsi/exynos5
        - git clone https://github.com/FlominatorGD/android_hardware_samsung hardware/samsung
+       # Fix DTB ERROR
+       - rm -rf system/tools/dtbtool
+       - git clone https://github.com/LineageOS/android_system_tools_dtbtool system/tools/dtbtool
   Build_script:
        - source build/envsetup.sh
        - lunch carbon_j7elte-eng
