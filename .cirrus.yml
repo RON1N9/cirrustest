@@ -25,8 +25,8 @@ task:
        - cd scripts
        - bash setup/android_build_env.sh
        - cd ..
-       - repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
-       - repo sync -j8
+       - repo init -u https://github.com/Evolution-X/manifest -b elle
+       - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
   CloneDT_script:
        - git clone https://github.com/RON1N9/android_device_samsung_j7elte device/samsung/j7elte -b carbon-11
        - git clone https://github.com/Techy0302/android_device_samsung_universal7580-common device/samsung/universal7580-common
@@ -37,11 +37,8 @@ task:
        - git clone https://github.com/maxx0021/android_hardware_samsung_slsi_openmax hardware/samsung_slsi/openmax
        - git clone https://github.com/maxx0021/android_hardware_samsung_slsi_exynos5 hardware/samsung_slsi/exynos5
        - git clone https://github.com/FlominatorGD/android_hardware_samsung hardware/samsung
-       # Fix DTB ERROR
-       - rm -rf system/tools/dtbtool
-       - git clone https://github.com/LineageOS/android_system_tools_dtbtool system/tools/dtbtool
   Build_script:
        - source build/envsetup.sh
-       - lunch carbon_j7elte-userdebug
-       - make carbon_j7elte-userdebug -j$(nproc --all)
+       - lunch evolution_j7elte-eng
+       - mka evolution_j7elte-eng
       
