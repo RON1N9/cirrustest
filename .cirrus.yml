@@ -21,7 +21,7 @@ task:
        - git config --global user.name "RON1N9"
        - git config --global user.email linuxxxkali33@gmail.com
   SyncROM_script:
-       - git clone https://github.com/Rahat87942R/local_manifest.git --depth 1 -b master .repo/local_manifests 
+       - git clone https://github.com/RON1N9/local_manifest.git --depth 1 -b master .repo/local_manifests 
        - cd ..
   Scr_script:
        - git clone https://github.com/akhilnarang/scripts
