@@ -21,13 +21,15 @@ task:
        - git config --global user.name "RON1N9"
        - git config --global user.email linuxxxkali33@gmail.com
   SyncROM_script:
-       - git clone https://github.com/akhilnarang/script
-       - cd scripts
-       - bash setup/android_build_env.sh
        - git clone https://github.com/Rahat87942R/local_manifest.git --depth 1 -b master .repo/local_manifests 
        - cd ..
-       - repo init -u https://github.com/crdroidandroid/android.git -b 11.0
+  Scr_script:
+       - git clone https://github.com/akhilnarang/scripts
+       - cd scripts
+       - bash setup/android_build_env.sh
+       - cd ..
        - repo sync
+       - repo init -u https://github.com/crdroidandroid/android.git -b 11.0
   CloneDT_script:
        - git clone https://github.com/RON1N9/android_device_samsung_j7elte device/samsung/j7elte -b Crdroid-11
        - git clone https://github.com/Techy0302/android_device_samsung_universal7580-common device/samsung/universal7580-common
