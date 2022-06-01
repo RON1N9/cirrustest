@@ -21,9 +21,10 @@ task:
        - git config --global user.name "RON1N9"
        - git config --global user.email linuxxxkali33@gmail.com
   SyncROM_script:
-       - git clone https://github.com/akhilnarang/scripts
+       - git clone https://github.com/akhilnarang/script
        - cd scripts
        - bash setup/android_build_env.sh
+       - git clone https://github.com/Rahat87942R/local_manifest.git --depth 1 -b master .repo/local_manifests 
        - cd ..
        - repo init -u https://github.com/crdroidandroid/android.git -b 11.0
        - repo sync
