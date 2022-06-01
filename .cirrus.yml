@@ -23,6 +23,7 @@ task:
   SyncROM_script:
        - git clone https://github.com/RON1N9/local_manifest.git --depth 1 -b master .repo/local_manifests 
        - cd ..
+       - ls
   Scr_script:
        - git clone https://github.com/akhilnarang/scripts
        - cd scripts
