@@ -2,7 +2,7 @@ task:
   name: "Build ROM"
   timeout_in: 6h 
   container:
-      image: apon77/aosp:cirrus
+      image: ubuntu:latest
       cpu: 8
       memory: 32
   
