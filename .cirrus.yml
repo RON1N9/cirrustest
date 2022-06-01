@@ -28,6 +28,7 @@ task:
        - cd scripts
        - bash setup/android_build_env.sh
        - cd ..
+       - pwd
        - repo sync
        - repo init -u https://github.com/crdroidandroid/android.git -b 11.0
   CloneDT_script:
